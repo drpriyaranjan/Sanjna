@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+<style>
+body{
+margin:0;
+height:100vh;
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+font-family:Poppins;
+overflow:hidden;
+}
+
+.card{
+padding:25px;
+max-width:350px;
+}
+
+h1{
+font-family:'Great Vibes',cursive;
+font-size:42px;
+margin:0;
+}
+
+.time{
+font-size:18px;
+margin-top:10px;
+opacity:0.9;
+}
+
+.counter{
+margin-top:18px;
+font-size:16px;
+}
+
+button{
+margin-top:25px;
+padding:12px 20px;
+border:none;
+border-radius:25px;
+background:#ff4b91;
+color:white;
+font-size:16px;
+}
+
+.heart{
+position:absolute;
+color:#ff6fa5;
+animation:float 6s linear infinite;
+}
+
+@keyframes float{
+from{transform:translateY(100vh);opacity:1;}
+to{transform:translateY(-10vh);opacity:0;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+<h1>Sanjna 💙</h1>
+<div id="greet"></div>
+
+<div class="time" id="clock"></div>
+
+<div class="counter" id="loveDays"></div>
+
+<button onclick="confess()">Tap me</button>
+
+<div id="final" style="margin-top:20px;font-size:20px;"></div>
+</div>
+
+<script>
+
+// LIVE CLOCK
+function clock(){
+document.getElementById("clock").innerHTML =
+new Date().toLocaleString();
+}
+setInterval(clock,1000); clock();
+
+// GREETING
+let h=new Date().getHours();
+let g="Good evening 🌙";
+if(h<12) g="Good morning ☀️";
+else if(h<17) g="Good afternoon 🌤️";
+document.getElementById("greet").innerHTML=g;
+
+// RELATION TIMER (CHANGE DATE HERE)
+let start=new Date("2025-04-03"); // <-- edit your date
+let today=new Date();
+let days=Math.floor((today-start)/(1000*60*60*24));
+document.getElementById("loveDays").innerHTML=
+days+" days of you in my life";
+
+// BUTTON MESSAGE
+function confess(){
+document.getElementById("final").innerHTML=
+"I don't just like you... I feel peaceful with you ❤️";
+}
+
+// FLOATING HEARTS
+setInterval(()=>{
+let heart=document.createElement("div");
+heart.innerHTML="❤";
+heart.className="heart";
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=(15+Math.random()*25)+"px";
+document.body.appendChild(heart);
+setTimeout(()=>heart.remove(),6000);
+},400);
+
+<script>
+
+// LIVE CLOCK
+function clock(){
+document.getElementById("clock").innerHTML =
+new Date().toLocaleString();
+}
+setInterval(clock,1000); clock();
+
+// GREETING
+let h=new Date().getHours();
+let g="Good evening 🌙";
+if(h<12) g="Good morning ☀️";
+else if(h<17) g="Good afternoon 🌤️";
+document.getElementById("greet").innerHTML=g;
+
+// RELATION TIMER (edit date)
+let start=new Date("2024-07-06");
+let today=new Date();
+let days=Math.floor((today-start)/(1000*60*60*24));
+document.getElementById("loveDays").innerHTML=
+days+" days of you in my life";
+
+// ASK QUESTION
+function confess(){
+document.getElementById("final").innerHTML=
+"Will you be mine forever? 🥺💙<br><br>\
+<button onclick='yes()' style='background:#28c76f'>Yes</button> \
+<button id='noBtn' onmouseover='run()' style='background:#ff4d4d; position:relative'>No</button>";
+}
+
+// YES RESPONSE
+function yes(){
+document.getElementById("final").innerHTML=
+"I knew it 😌❤️";
+}
+
+// RUNNING NO BUTTON
+function run(){
+let btn=document.getElementById("noBtn");
+btn.style.position="absolute";
+btn.style.left=Math.random()*70+"vw";
+btn.style.top=Math.random()*60+"vh";
+}
+
+// FLOATING HEARTS
+setInterval(()=>{
+let heart=document.createElement("div");
+heart.innerHTML="❤";
+heart.className="heart";
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=(15+Math.random()*25)+"px";
+document.body.appendChild(heart);
+setTimeout(()=>heart.remove(),6000);
+},400);
+
+<script>
+
+// LIVE CLOCK
+function clock(){
+document.getElementById("clock").innerHTML =
+new Date().toLocaleString();
+}
+setInterval(clock,1000); clock();
+
+// GREETING
+let h=new Date().getHours();
+let g="Good evening 🌙";
+if(h<12) g="Good morning ☀️";
+else if(h<17) g="Good afternoon 🌤️";
+document.getElementById("greet").innerHTML=g;
+
+// RELATION TIMER (edit date)
+let start=new Date("2024-07-06");
+let today=new Date();
+let days=Math.floor((today-start)/(1000*60*60*24));
+document.getElementById("loveDays").innerHTML=
+days+" days of you in my life";
+
+// ASK QUESTION
+function confess(){
+document.getElementById("final").innerHTML=
+"Will you be mine forever? 🥺💙<br><br>\
+<button onclick='yes()' style='background:#28c76f'>Yes</button> \
+<button id='noBtn' onmouseover='run()' style='background:#ff4d4d; position:relative'>No</button>";
+}
+
+// YES RESPONSE
+function yes(){
+document.getElementById("final").innerHTML=
+"I knew it 😌❤️";
+}
+
+// RUNNING NO BUTTON
+function run(){
+let btn=document.getElementById("noBtn");
+btn.style.position="absolute";
+btn.style.left=Math.random()*70+"vw";
+btn.style.top=Math.random()*60+"vh";
+}
+
+// FLOATING HEARTS
+setInterval(()=>{
+let heart=document.createElement("div");
+heart.innerHTML="❤";
+heart.className="heart";
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=(15+Math.random()*25)+"px";
+document.body.appendChild(heart);
+setTimeout(()=>heart.remove(),6000);
+},400);
+
+<script>
+
+// LIVE CLOCK
+function clock(){
+document.getElementById("clock").innerHTML =
+new Date().toLocaleString();
+}
+setInterval(clock,1000); clock();
+
+// GREETING
+let h=new Date().getHours();
+let g="Good evening 🌙";
+if(h<12) g="Good morning ☀️";
+else if(h<17) g="Good afternoon 🌤️";
+document.getElementById("greet").innerHTML=g;
+
+// RELATION TIMER (edit date)
+let start=new Date("2024-07-06");
+let today=new Date();
+let days=Math.floor((today-start)/(1000*60*60*24));
+document.getElementById("loveDays").innerHTML=
+days+" days of you in my life";
+
+// ASK QUESTION
+function confess(){
+document.getElementById("final").innerHTML=
+"Will you be mine forever? 🥺💙<br><br>\
+<button onclick='yes()' style='background:#28c76f'>Yes</button> \
+<button id='noBtn' onmouseover='run()' style='background:#ff4d4d; position:relative'>No</button>";
+}
+
+// YES RESPONSE
+function yes(){
+document.getElementById("final").innerHTML=
+"I knew it you will always be mine 😌❤️";
+}
+
+// RUNNING NO BUTTON
+function run(){
+let btn=document.getElementById("noBtn");
+btn.style.position="absolute";
+btn.style.left=Math.random()*70+"vw";
+btn.style.top=Math.random()*60+"vh";
+}
+
+// FLOATING HEARTS
+setInterval(()=>{
+let heart=document.createElement("div");
+heart.innerHTML="❤";
+heart.className="heart";
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=(15+Math.random()*25)+"px";
+document.body.appendChild(heart);
+setTimeout(()=>heart.remove(),6000);
+},400);
+
+</script>
+
+</body>
+</html>
